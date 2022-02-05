@@ -20,7 +20,7 @@ import WeekData2;
 
 using StringTools;
 
-class FreeplayState extends MusicBeatState
+class FreeplayState2 extends MusicBeatState
 {
 	var songs:Array<SongMetadata> = [];
 
