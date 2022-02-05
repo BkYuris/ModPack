@@ -31,7 +31,7 @@ using StringTools;
 // TO DO: Redo the menu creation system for not being as dumb
 class OptionsState extends MusicBeatState
 {
-	var options:Array<String> = ['Notes', 'Keyboard Controls', 'Mobile Controls', 'Preferences'];
+	var options:Array<String> = ['Notes', 'Keyboard Controls', 'Mobile Controls', 'Preferences', 'Mods'];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
 	public static var menuBG:FlxSprite;		
@@ -41,7 +41,7 @@ class OptionsState extends MusicBeatState
 		DiscordClient.changePresence("Options Menu", null);
 		#end
 
-		menuBG = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		menuBG = new FlxSprite().loadGraphic(Paths.image('menuTransRights'));
 		menuBG.color = 0xFFea71fd;
 		menuBG.setGraphicSize(Std.int(menuBG.width * 1.1));
 		menuBG.updateHitbox();
@@ -103,10 +103,11 @@ class OptionsState extends MusicBeatState
 				case 'Keyboard Controls':                                        
 					openSubState(new ControlsSubstate());
 				case 'Mobile Controls':
-					MusicBeatState.switchState(new options.CustomControlsState());					
-
+					MusicBeatState.switchState(new options.CustomControlsState());
 				case 'Preferences':                                        
-					openSubState(new PreferencesSubstate());									
+					openSubState(new PreferencesSubstate());
+				case 'Mods':
+				    openSubState(new ModsMenuState());
 			}
 		}
 	}

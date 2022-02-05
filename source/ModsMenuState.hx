@@ -20,7 +20,7 @@ import ModsWeekData;
 
 using StringTools;
 
-class FreeplayState2 extends MusicBeatState
+class ModsMenuState extends MusicBeatState
 {
 	var songs:Array<SongMetadata> = [];
 
@@ -258,7 +258,7 @@ class FreeplayState2 extends MusicBeatState
 				colorTween.cancel();
 			}
 			FlxG.sound.play(Paths.sound('cancelMenu'));
-			MusicBeatState.switchState(new MainMenuState());
+			MusicBeatState.switchState(new OptionsState());
 		}
 
 		#if PRELOAD_ALL
