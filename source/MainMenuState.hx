@@ -229,7 +229,7 @@ class MainMenuState extends MusicBeatState
 									case 'freeplay':
 										MusicBeatState.switchState(new FreeplayState());
 									case 'mods':
-									    MusicBeatState.switchState(new ModsFreeplayState());
+									    MusicBeatState.switchState(new ModsMenuState());
 									case 'credits':
 										MusicBeatState.switchState(new CreditsState());
 									case 'options':
